@@ -10,13 +10,7 @@
 			Last Name: <input type="text" ng-model="lastName"><br><br>
 			Full Name: {{firstName + " " + lastName}}
 		</div>
-		<script>
-			var app = angular.module('myApp', []);
-			
-			app.controller('myCtrl', function($scope) {
-				$scope.firstName= "Sonu";
-				$scope.lastName= "Singh";
-			});
-		</script>
+		<script src="myApp.js"></script>
+		<script src="myCtrl.js"></script>
 	</body>
 </html>
