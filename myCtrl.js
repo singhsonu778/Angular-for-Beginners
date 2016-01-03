@@ -1,7 +1,6 @@
-app.controller('myCtrl', function($scope) {
-	$scope.firstName = "Sonu";
-	$scope.lastName = "Singh";
-	$scope.fullName = function() {
-        return $scope.firstName + " " + $scope.lastName;
-    };
+app.controller('myCtrl', function($scope, $http) {
+	$http.get("http://www.w3schools.com/angular/customers.php")
+		 .then(function(response) {
+			 $scope.records = response.data.records;
+		 });
 });
