@@ -9,7 +9,7 @@
 		<div ng-app="myApp" ng-controller="myCtrl">
 			First Name: <input type="text" ng-model="firstName"><br>
 			Last Name: <input type="text" ng-model="lastName"><br><br>
-			Full Name: {{firstName + " " + lastName}}
+			Full Name: {{fullName()}}
 			<my-test-directive></my-test-directive>
 			<div my-test-directive></div>
 			<div class="my-test-directive"></div>
