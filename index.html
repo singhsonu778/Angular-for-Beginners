@@ -3,20 +3,31 @@
 	<head>
 		<title>Angular for Beginners</title>
 		<script src="angular.js"></script>
-		<link rel="stylesheet" href="myStyles.css">
+		<script src="angular-route.js"></script>
 	</head>
 	<body>
-		<div ng-app="myApp" ng-controller="myCtrl">
-			<table>
-				<tr ng-repeat="x in records">
-					<td>{{ $index + 1 }}</td>
-					<td>{{ x.Name }}</td>
-					<td>{{ x.City }}</td>
-					<td>{{ x.Country }}</td>
-				</tr>
-			</table>
+		<h2>AngularJS Sample Application</h2>
+		<div ng-app="myApp">
+	
+			<p><a href="#addStudent">Add Student</a></p>
+			<p><a href="#viewStudents">View Students</a></p>
+			
+			<div ng-view></div>
+	
+			<script type="text/ng-template" id="addStudent.htm">
+            	<h2>Add Student</h2>
+            	{{message}}
+         	</script>
+	
+			<script type="text/ng-template" id="viewStudents.htm">
+            	<h2>View Students</h2>
+            	{{message}}
+         	</script>
+         	
 		</div>
 		<script src="myApp.js"></script>
-		<script src="myCtrl.js"></script>
+		<script src="route.js"></script>
+		<script src="addStudentCtrl.js"></script>
+		<script src="viewStudentsCtrl.js"></script>
 	</body>
 </html>
